@@ -19,22 +19,28 @@ int main()
     scanf("%d", &pilihan);
 
     if (pilihan==1) {
-    
+    // penambahan
     }
+    
     if (pilihan==2) {
-    
+    // pengurangan  
     }
+    
     if (pilihan==3) {
-    
+    // perkalian
     }
+    
     if (pilihan==4) {
-    
+    // pembagian
     }
+    
     if (pilihan==5) {
-    
+    //  penurunan polinomial
     }
+    
     if (pilihan==6) {
     
     }
+    
     return 0;
 }
