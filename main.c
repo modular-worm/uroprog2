@@ -35,7 +35,7 @@ int main()
     }
     
     if (pilihan==5) {
-    //  penurunan polinomial
+    //  penurunan polinomialx
     }
     
     if (pilihan==6) {
