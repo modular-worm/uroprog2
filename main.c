@@ -28,6 +28,53 @@ int main()
     
     if (pilihan==3) {
     // perkalian
+        #include<stdio.h>
+        main()
+        {
+            int i,j,dpol1,dpol2;
+            printf("derajat polinom 1\n");
+            scanf("%d",&dpol1);
+            printf("derajat polinom 2\n");
+            scanf("%d",&dpol2);
+            int a[dpol1],b[dpol2],kali[dpol1+dpol2];
+            printf("koef pd polinom 1\n");
+            for(i=0;i<dpol1;i++)
+            {
+                printf("koef polinom 1 pada x^%d \n",i);
+                scanf("%d",&a[i]);
+            }
+            printf("koef pada polinom 2\n");
+            for(i=0;i<dpol2;i++)
+            {
+                printf("koef polinom 2 pada x^%d\n",i);
+                scanf("%d",&b[i]);
+            }
+            for(i=0;i<dpol1+dpol2;i++)
+            {
+                kali[i]=0;
+            }
+            for(i=0;i<dpol1;i++)
+            {
+                for(j=0;j<dpol2;j++)
+                {
+                    if(a[i]!=0 && b[j]!=0)
+                        kali[i+j]+=a[i]*b[j];
+                }
+            }
+            for(i=dpol1+dpol2-1;i>=0;i--)
+            {
+                if(kali[i]!=0){
+                    if(i!=0) 
+                    {
+                        printf("%d x^%d + ",kali[i],i);
+                    }
+                    else
+                    {
+                        printf("%d x^%d\n",kali[i],i);
+                    }
+                }
+            }
+        }
     }
     
     if (pilihan==4) {
