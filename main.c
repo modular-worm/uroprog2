@@ -6,14 +6,12 @@
 
 int main()
 {
-    int pilihan;
+    int pilihan, derajat_polinom, i, j;
 
     printf("1. Penambahan\n");
     printf("2. Pengurangan\n");
     printf("3. Perkalian\n");
-    printf("4. Pembagian\n");
-    printf("5. Penurunan polinimial:\n");
-    printf("6. Multiple operation calculator (hanya bekerja dengan integer):\n");
+    printf("4. Penurunan polinimial\n");
     printf("Pilih operasi (1, 2, 3, etc.):");
 
     scanf("%d", &pilihan);
@@ -27,10 +25,6 @@ int main()
     }
     
     if (pilihan==3) {
-    // perkalian
-        #include<stdio.h>
-        main()
-        {
             int i,j,dpol1,dpol2;
             printf("derajat polinom 1\n");
             scanf("%d",&dpol1);
@@ -75,18 +69,30 @@ int main()
                 }
             }
         }
-    }
     
     if (pilihan==4) {
-    // pembagian
-    }
-    
-    if (pilihan==5) {
+        printf("Masukkan derajat polinomial: ");
+        scanf("%d", &derajat_polinom);
+        double koeff_init[derajat_polinom+1];
+        double koeff_turunan[derajat_polinom];
+//        int derajat_turunan[derajat_polinom]
+        for( i = 0; i <= derajat_polinom; i++) {
+            printf("Koeffisien derajat ke %d: ", i);
+            scanf("%lf", &koeff_init[i]);
+            if (i>0) {
+                koeff_turunan[i-1] = i*koeff_init[i];
+            }
+        }
+        printf("Turunan = %.2lf ", koeff_turunan[0]);
+        for( j = 1; j < derajat_polinom; j++) {
+            if (koeff_turunan[j] >= 0) {
+                printf("+ %.2lf x^%d ", koeff_turunan[j], j);
+            } else {
+                printf("- %.2lf x^%d ", koeff_turunan[j]*-1, j);
+            }
+        }
+
     //  penurunan polinomial
-    }
-    
-    if (pilihan==6) {
-    
     }
     
     return 0;
